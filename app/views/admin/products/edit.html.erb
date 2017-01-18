@@ -4,5 +4,10 @@
 <%= f.input :description %>
 <%= f.input :quantity %>
 <%= f.input :price %>
+<% if @product.image.present? %>
+<span>目前商品图</span> <br>
+<%= imgae_tag(@product.image.thumb.url) %>
+<% end %>
+<%= f.input :image %>
 <%= f.submit "Submit" %>
 <% end %>
